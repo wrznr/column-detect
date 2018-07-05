@@ -24,7 +24,28 @@ Running
 ```shell
 (env) $ python column_detect.py -o test.json -O json test/test.bin.png
 ```
-should create a file `test.json`:
+should create a file `test.json` which contains a list of corrdinates representing the detected column areas.
 ```json
-...
+{
+    "test.bin.png": [
+        {
+            "l": 0,
+            "t": 0,
+            "r": 1255,
+            "b": 4274
+        },
+        {
+            "l": 1225,
+            "t": 0,
+            "r": 2280,
+            "b": 4274
+        },
+        {
+            "l": 2251,
+            "t": 0,
+            "r": 3365,
+            "b": 4274
+        }
+    ]
+}
 ```
